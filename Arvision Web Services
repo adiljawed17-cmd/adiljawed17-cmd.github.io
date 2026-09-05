@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arvision Web Services | Professional Websites</title>
+
+<meta name="description" content="Arvision Web Services creates professional, modern and mobile-friendly websites for businesses.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070707;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,7,7,.95);
+    border-bottom:1px solid #222;
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.logo span,
+.section-title span,
+.contact-box span{
+    color:#00e5ff;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
+    background:radial-gradient(circle at top,#12333b 0,#070707 48%);
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(42px,8vw,75px);
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+h1 span{
+    color:#00e5ff;
+}
+
+.hero p{
+    color:#aaa;
+    max-width:650px;
+    margin:0 auto 30px;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:6px;
+    transition:.3s;
+}
+
+.primary{
+    background:#00e5ff;
+    color:#000;
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+}
+
+.secondary{
+    border:1px solid #444;
+    color:#fff;
+}
+
+.secondary:hover{
+    border-color:#00e5ff;
+    color:#00e5ff;
+}
+
+.channel{
+    border:1px solid #25D366;
+    color:#25D366;
+}
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#999;
+    margin-bottom:45px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #242424;
+    padding:28px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff;
+}
+
+.icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#999;
+    font-size:14px;
+}
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.price-card{
+    background:#101010;
+    border:1px solid #292929;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+}
+
+.price-card.featured{
+    border:2px solid #00e5ff;
+}
+
+.price{
+    font-size:35px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    color:#aaa;
+    margin:20px 0;
+}
+
+.price-card li{
+    margin:9px 0;
+}
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project{
+    height:190px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#111,#1b3940);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border:1px solid #292929;
+}
+
+.project h3{
+    font-size:22px;
+}
+
+.contact-box{
+    max-width:750px;
+    margin:auto;
+    background:#101010;
+    padding:40px;
+    border-radius:15px;
+    border:1px solid #292929;
+    text-align:center;
+}
+
+.contact-box p{
+    color:#aaa;
+    margin:15px 0 25px;
+}
+
+footer{
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid #222;
+    color:#777;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    z-index:999;
+    box-shadow:0 5px 20px #000;
+}
+
+@media(max-width:700px){
+
+    nav{
+        display:none;
+    }
+
+    .nav{
+        justify-content:center;
+    }
+
+    section{
+        padding:70px 15px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .contact-box{
+        padding:25px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">
+Arvision <span>Web Services</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">🚀 Professional Website Services</div>
+
+<h1>
+Grow Your Business With A
+<span>Professional Website.</span>
+</h1>
+
+<p>
+Arvision Web Services creates modern, fast and
+mobile-friendly websites for businesses, brands
+and entrepreneurs.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/923711344905?text=Hello%20Arvision%20Web%20Services%2C%20I%20need%20a%20website.">
+Get Your Website
+</a>
+
+<a class="btn secondary" href="#services">
+View Services
+</a>
+
+<br>
+
+<a class="btn channel"
+href="https://whatsapp.com/channel/0029VbDTnE01t90ZdpK04E0C"
+target="_blank">
+📢 Join Our WhatsApp Channel
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Our <span>Services</span>
+</h2>
+
+<p class="subtitle">
+Professional digital solutions for your business.
+</p>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Business Website</h3>
+<p>
+Professional websites for shops, companies,
+services and local businesses.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛒</div>
+<h3>E-Commerce</h3>
+<p>
+Online stores with products, prices,
+orders and customer contact options.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Mobile Friendly</h3>
+<p>
+Websites that look great on phones,
+tablets and computers.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔍</div>
+<h3>SEO Setup</h3>
+<p>
+Basic SEO structure to help search engines
+understand your website.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📍</div>
+<h3>Google Maps</h3>
+<p>
+Add your business location and directions
+for your customers.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💬</div>
+<h3>WhatsApp Integration</h3>
+<p>
+Let customers contact your business
+directly through WhatsApp.
+</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+<div class="container">
+
+<h2 class="section-title">
+Our <span>Packages</span>
+</h2>
+
+<p class="subtitle">
+Packages can be customized according to your business needs.
+</p>
+
+<div class="pricing">
+
+<div class="price-card">
+
+<h3>Basic</h3>
+
+<div class="price">
+PKR 5,000
+</div>
+
+<ul>
+<li>✔ 1–3 Pages</li>
+<li>✔ Mobile Friendly</li>
+<li>✔ WhatsApp Button</li>
+<li>✔ Contact Section</li>
+</ul>
+
+<a href="https://wa.me/923711344905?text=Hello%2C%20I%20am%20interested%20in%20the%20Basic%20website%20package."
+class="btn primary">
+Order Now
+</a>
+
+</div>
+
+
+<div class="price-card featured">
+
+<h3>Business</h3>
+
+<div class="price">
+PKR 12,000
+</div>
+
+<ul>
+<li>✔ 5–7 Pages</li>
+<li>✔ Professional Design</li>
+<li>✔ WhatsApp Integration</li>
+<li>✔ Google Maps</li>
+<li>✔ Basic SEO</li>
+</ul>
+
+<a href="https://wa.me/923711344905?text=Hello%2C%20I%20am%20interested%20in%20the%20Business%20website%20package."
+class="btn primary">
+Order Now
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>Premium</h3>
+
+<div class="price">
+PKR 25,000+
+</div>
+
+<ul>
+<li>✔ Custom Website</li>
+<li>✔ E-Commerce Options</li>
+<li>✔ Advanced Features</li>
+<li>✔ SEO Setup</li>
+<li>✔ Maintenance</li>
+</ul>
+
+<a href="https://wa.me/923711344905?text=Hello%2C%20I%20am%20interested%20in%20the%20Premium%20website%20package."
+class="btn primary">
+Order Now
+</a>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<h2 class="section-title">
+Our <span>Portfolio</span>
+</h2>
+
+<p class="subtitle">
+Website concepts for different types of businesses.
+</p>
+
+<div class="portfolio">
+
+<div class="project">
+<h3>💎 Jewelry Store</h3>
+</div>
+
+<div class="project">
+<h3>🍔 Restaurant</h3>
+</div>
+
+<div class="project">
+<h3>🏠 Real Estate</h3>
+</div>
+
+<div class="project">
+<h3>👕 Fashion Store</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>
+Let's Build Your <span>Website</span>
+</h2>
+
+<p>
+Have a business? Get a professional website
+and start building your online presence.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/923711344905?text=Hello%20Arvision%20Web%20Services%2C%20I%20want%20to%20discuss%20a%20website.">
+💬 WhatsApp: 0371 1344905
+</a>
+
+<br>
+
+<a class="btn channel"
+href="https://whatsapp.com/channel/0029VbDTnE01t90ZdpK04E0C"
+target="_blank">
+📢 Join WhatsApp Channel
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Arvision Web Services.
+All Rights Reserved.
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/923711344905?text=Hello%20Arvision%20Web%20Services%2C%20I%20need%20a%20website."
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
+
+</body>
+</html>
